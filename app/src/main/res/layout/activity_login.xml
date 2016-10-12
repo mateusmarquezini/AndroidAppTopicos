@@ -12,12 +12,14 @@
         android:layout_height="41dp"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/loginNomeUsuario"
         app:layout_constraintLeft_toLeftOf="@+id/guideline"
         android:layout_marginStart="16dp"
         app:layout_constraintRight_toLeftOf="@+id/guideline4"
         android:layout_marginEnd="16dp"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <android.support.constraint.Guideline
         android:layout_width="0dp"
@@ -52,7 +54,7 @@
         android:id="@+id/guideline4"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="366dp"
+        tools:layout_editor_absoluteX="342dp"
         app:layout_constraintGuide_end="18dp" />
 
     <EditText
@@ -60,15 +62,19 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/loginSenhaUsuario"
         app:layout_constraintLeft_toLeftOf="@+id/guideline"
         app:layout_constraintRight_toLeftOf="@+id/guideline4"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        android:layout_marginTop="47dp"
+        app:layout_constraintTop_toBottomOf="@+id/loginNomeUsuario"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="47dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:text="Usuario:"
@@ -83,7 +89,9 @@
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         android:layout_marginBottom="8dp"
         app:layout_constraintHorizontal_bias="0.66"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintVertical_bias="0.39"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:text="Senha:"
@@ -93,7 +101,7 @@
         app:layout_constraintRight_toLeftOf="@+id/guideline"
         android:layout_marginEnd="8dp"
         app:layout_constraintVertical_bias="0.47000003"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/loginSenhaUsuario"
         app:layout_constraintLeft_toLeftOf="@+id/guideline6"
         android:layout_marginStart="16dp" />
 
@@ -101,10 +109,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline6"
-        app:layout_constraintGuide_begin="15dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="15dp" />
+        tools:layout_editor_absoluteX="15dp"
+        app:layout_constraintGuide_begin="15dp" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
@@ -119,7 +127,7 @@
         android:text="Cadastrar"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/btnCadastrarUsuario"
         android:layout_marginEnd="16dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
@@ -132,9 +140,9 @@
         android:text="Entrar"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/btnEntrar"
         app:layout_constraintLeft_toLeftOf="@+id/guideline6"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnCadastrarUsuario"
         style="@style/Widget.AppCompat.Button.Colored"
         android:background="@android:color/holo_green_dark" />
 
@@ -161,13 +169,17 @@
         android:layout_height="179dp"
         app:srcCompat="@drawable/logo"
         android:id="@+id/imageView2"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="48dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="48dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="37dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
-        android:layout_marginBottom="8dp" />
+        app:layout_constraintBottom_toTopOf="@+id/loginNomeUsuario"
+        android:layout_marginBottom="29dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
 </android.support.constraint.ConstraintLayout>
