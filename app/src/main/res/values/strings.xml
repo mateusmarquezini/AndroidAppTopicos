@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Learn IT</string>
+    <string name="tela_cadastro_usuario">Cadastro</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="boas_vindas">Bem vindo!</string>
 </resources>
