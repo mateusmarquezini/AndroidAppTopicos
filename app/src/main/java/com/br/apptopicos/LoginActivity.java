@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
                 if (nomeDigitado.length() >= 5 && senhaDigitada.length() >= 5
                         && "admin".equals(nomeDigitado)
                         && "admin".equals(senhaDigitada)) {
-                    entrar();
                 } else {
                     Toast.makeText(LoginActivity.this, "Login inválido, tente novamente!", Toast.LENGTH_SHORT).show();
                     return;
@@ -49,12 +48,5 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-    }
-
-
-    private void entrar() {
-
     }
 }

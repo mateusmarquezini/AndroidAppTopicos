@@ -11,11 +11,7 @@
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".CadastroUsuarioActivity"
@@ -26,8 +22,20 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".LoginActivity" />
         </activity>
-        <activity android:name=".BoasVindasActivity"
-            android:label="@string/boas_vindas"></activity>
+        <activity
+            android:name=".BoasVindasActivity"
+            android:label="@string/boas_vindas">
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
