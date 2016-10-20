@@ -29,9 +29,7 @@ class LoginActivity : AppCompatActivity() {
             val nomeDigitado = nomeUsuario.text.toString()
             val senhaDigitada = senhaUsuario.text.toString()
 
-            if (nomeDigitado.length >= 5 && senhaDigitada.length >= 5
-                    && "admin" == nomeDigitado
-                    && "admin" == senhaDigitada) {
+            if (verificaLogin(nomeDigitado, senhaDigitada)) {
             } else {
                 Toast.makeText(this@LoginActivity, "Login inválido, tente novamente!", Toast.LENGTH_SHORT).show()
                 return@OnClickListener
@@ -41,5 +39,14 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intentEntrar)
             finish()
         })
+    }
+
+    fun verificaLogin(nomeDigitado: String, senhaDigitada: String): Boolean {
+        if (nomeDigitado.length >= 5 && senhaDigitada.length >= 5
+                && "admin" == nomeDigitado
+                && "admin" == senhaDigitada) {
+            return true
+        }
+        return false
     }
 }
