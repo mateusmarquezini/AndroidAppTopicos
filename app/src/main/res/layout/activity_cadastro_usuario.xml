@@ -18,11 +18,11 @@
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
-        android:layout_height="511dp"
+        android:layout_height="603dp"
         android:id="@+id/guideline7"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="369dp"
+        tools:layout_editor_absoluteX="396dp"
         app:layout_constraintGuide_end="15dp" />
 
     <android.support.constraint.Guideline
@@ -30,9 +30,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/guideline11"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="421dp"
+        tools:layout_editor_absoluteY="593dp"
         tools:layout_editor_absoluteX="0dp"
-        app:layout_constraintGuide_end="90dp" />
+        app:layout_constraintGuide_end="10dp" />
 
     <ImageView
         android:layout_width="355dp"
@@ -52,10 +52,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnCadastrar"
         style="@style/Widget.AppCompat.Button.Colored"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline13"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/cadPassword"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/guideline16"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline15" />
 
     <TextView
         android:text="Usuário:"
@@ -87,7 +90,9 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
         android:layout_marginBottom="8dp"
         app:layout_constraintRight_toRightOf="@+id/cadNomeUsuario"
-        app:layout_constraintLeft_toLeftOf="@+id/cadNomeUsuario" />
+        app:layout_constraintLeft_toLeftOf="@+id/cadNomeUsuario"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.060000002" />
 
     <EditText
         android:layout_width="0dp"
@@ -160,7 +165,7 @@
         android:id="@+id/guideline16"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteX="366dp"
         app:layout_constraintGuide_end="45dp" />
 
 </android.support.constraint.ConstraintLayout>
