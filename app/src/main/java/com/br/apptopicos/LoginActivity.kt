@@ -16,7 +16,7 @@ class LoginActivity : AppCompatActivity() {
 
         val botaoCadastrarUsuario = findViewById(R.id.btnCadastrarUsuario) as Button
         botaoCadastrarUsuario.setOnClickListener {
-            val intentCadastrarUsuario = Intent(this@LoginActivity, CadastroUsuarioActivity::class.java)
+            val intentCadastrarUsuario = navegarParaTelaDeCadastro()
             startActivity(intentCadastrarUsuario)
         }
 
@@ -30,10 +30,8 @@ class LoginActivity : AppCompatActivity() {
             val senhaDigitada = senhaUsuario.text.toString()
 
             if (verificaLogin(nomeDigitado, senhaDigitada)) {
-                val intentEntrar = Intent(this@LoginActivity, BoasVindasActivity::class.java)
-                startActivity(intentEntrar)
-                Toast.makeText(this@LoginActivity, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
-                finish()
+                navegarParaTelaInicial()
+
             } else {
                 Toast.makeText(this@LoginActivity, "Login inválido, tente novamente!", Toast.LENGTH_SHORT).show()
                 return@OnClickListener
@@ -48,5 +46,17 @@ class LoginActivity : AppCompatActivity() {
             return true
         }
         return false
+    }
+
+    fun navegarParaTelaInicial(): Unit {
+        val intentEntrar = Intent(this@LoginActivity, BoasVindasActivity::class.java)
+        startActivity(intentEntrar)
+        Toast.makeText(this@LoginActivity, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
+        finish()
+    }
+
+    fun navegarParaTelaDeCadastro(): Intent {
+        val intentCadastrarUsuario = Intent(this@LoginActivity, CadastroUsuarioActivity::class.java)
+        return intentCadastrarUsuario
     }
 }

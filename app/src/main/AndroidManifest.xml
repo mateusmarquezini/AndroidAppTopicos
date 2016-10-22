@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".LoginActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CadastroUsuarioActivity"
             android:label="Cadastro"
@@ -35,7 +35,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".questionario.PrimeiroQuestionarioActivity"></activity>
+        <activity
+            android:name=".PrimeiroQuestionarioActivity"
+            android:label="@string/label_questionario"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
+        </activity>
+        <activity
+            android:name=".EstudarActivity"
+            android:label="@string/estudar"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
+
+        </activity>
     </application>
 
 </manifest>
