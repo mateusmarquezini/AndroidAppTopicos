@@ -6,6 +6,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 
 class CadastroUsuarioActivity : AppCompatActivity() {
 
@@ -34,6 +38,19 @@ class CadastroUsuarioActivity : AppCompatActivity() {
             Toast.makeText(this@CadastroUsuarioActivity, "Usuário Salvo com sucesso", Toast.LENGTH_SHORT).show()
             finish()
         })
+
+        fun service(): Unit {
+            var v = Pessoa()
+            val queue = Volley.newRequestQueue(this@CadastroUsuarioActivity)
+            val stringRequest = StringRequest(Request.Method.GET, "",
+                    Response.Listener<String>() {
+
+
+                    },
+                    Response.ErrorListener() {
+
+                    })
+        }
 
     }
 }

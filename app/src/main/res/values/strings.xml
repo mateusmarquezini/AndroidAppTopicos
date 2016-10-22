@@ -4,4 +4,13 @@
     <string name="entrar">Entrar</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="boas_vindas">Bem vindo!</string>
+    <string name="praticar">Praticar</string>
+    <string name="estudar">Estudar</string>
+    <string name="textoBoasVindas">O Learn IT é um aplicativo que irá fornecer um guia prático e dinâmico para aprender a programar, utilizando como linguagem de programação, o Groovy.
+Para quem não sabe, o Groovy é uma linguagem criada para o Java totalmente Orientada a Objetos, semelhante a Ruby e Python, pode-se entender como uma mistura dos mesmos e o mais legal de tudo; ela é interpretada pela JVM assim como Scala e Kotlin!
+Com todas essas características, entre várias outras, o Learn IT vai lhe apresentar de uma forma didática e interativa, sendo a maior expectativa, o aprendizado qualificado na escrita de códigos pelo aluno, utilizando Groovy</string>
+
+    Estudar
+
+
 </resources>

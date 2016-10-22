@@ -30,14 +30,14 @@ class LoginActivity : AppCompatActivity() {
             val senhaDigitada = senhaUsuario.text.toString()
 
             if (verificaLogin(nomeDigitado, senhaDigitada)) {
+                val intentEntrar = Intent(this@LoginActivity, BoasVindasActivity::class.java)
+                startActivity(intentEntrar)
+                Toast.makeText(this@LoginActivity, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
+                finish()
             } else {
                 Toast.makeText(this@LoginActivity, "Login inválido, tente novamente!", Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
-
-            val intentEntrar = Intent(this@LoginActivity, BoasVindasActivity::class.java)
-            startActivity(intentEntrar)
-            finish()
         })
     }
 
