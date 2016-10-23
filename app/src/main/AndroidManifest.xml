@@ -80,7 +80,14 @@
                 android:value=".BoasVindasActivity" />
         </activity>
         <activity
-            android:name=".ResultadoActivity"
+            android:name=".ResultadoPositivoActivity"
+            android:label="@string/resultado_final">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
+        </activity>
+        <activity
+            android:name=".ResultadoNegativoActivity"
             android:label="@string/resultado_final">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

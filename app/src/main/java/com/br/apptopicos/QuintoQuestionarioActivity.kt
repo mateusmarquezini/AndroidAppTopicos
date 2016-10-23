@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
+import com.br.apptopicos.util.PontuadorUtil
 
 class QuintoQuestionarioActivity : AppCompatActivity() {
 
@@ -28,6 +29,9 @@ class QuintoQuestionarioActivity : AppCompatActivity() {
                 // encontro o radio button selecionado pelo retorno do id
                 val opcaoEscolhida = findViewById(questaoSelecionada) as RadioButton
                 val textoOpcao = opcaoEscolhida.text.toString()
+                if (textoOpcao.equals("Safe Navigation")){
+                    PontuadorUtil.addPontos()
+                }
 
                 navegarTelaResultadoFinal()
             } else {
@@ -38,7 +42,15 @@ class QuintoQuestionarioActivity : AppCompatActivity() {
     }
 
     private fun navegarTelaResultadoFinal(): Unit {
-        val intentResultadoFinal = Intent(this@QuintoQuestionarioActivity, ResultadoActivity::class.java)
-        startActivity(intentResultadoFinal)
+
+        val intentResultadoFinal: Any
+
+        if (PontuadorUtil.pontos >= 4) {
+            intentResultadoFinal = Intent(this@QuintoQuestionarioActivity, ResultadoPositivoActivity::class.java)
+            startActivity(intentResultadoFinal)
+        } else {
+            intentResultadoFinal = Intent(this@QuintoQuestionarioActivity, ResultadoNegativoActivity::class.java)
+            startActivity(intentResultadoFinal)
+        }
     }
 }

@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
+import com.br.apptopicos.util.PontuadorUtil
 
 class QuartoQuestionarioActivity : AppCompatActivity() {
 
@@ -28,6 +29,9 @@ class QuartoQuestionarioActivity : AppCompatActivity() {
                 // encontro o radio button selecionado pelo retorno do id
                 val opcaoEscolhida = findViewById(questaoSelecionada) as RadioButton
                 val textoOpcao = opcaoEscolhida.text.toString()
+                if (textoOpcao.equals("Um bloco de código reutilizável delimitado por chaves")){
+                    PontuadorUtil.addPontos()
+                }
 
                 responderQuintoQuestionario()
             } else {

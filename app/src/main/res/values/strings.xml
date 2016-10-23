@@ -54,6 +54,16 @@ Com todas essas características, entre várias outras, o Learn IT vai lhe apres
     <string name="alternativa05_03">Safe Verified</string>
     <string name="alternativa05_04">Check Operation</string>
 
+    <!-- Resultado final (Textos)-->
+
+    <!-- Positivo -->
+    <string name="resultado_final_positivo_info01">Parabéns! Seu desempenho foi satisfatório! Você acertou: </string>
+    <string name="resultado_final_positivo_info02">De 5 questões! :)</string>
+
+    <!-- Negativo -->
+    <string name="resultado_final_negativo_info01">Que pena! Seu resultado não foi satisfatório! Você acertou: </string>
+    <string name="resultado_final_negativo_info02">De 5 questões! :(</string>
+
 
 
 
