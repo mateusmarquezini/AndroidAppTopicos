@@ -1,11 +1,18 @@
 <resources>
-    <string name="app_name">Learn IT</string>
+    <!-- Botões-->
     <string name="tela_cadastro_usuario">Cadastro</string>
     <string name="entrar">Entrar</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="lbl_responder">Responder</string>
+
+    <!-- Labels Action Bar-->
+    <string name="app_name">Learn IT</string>
     <string name="boas_vindas">Bem vindo!</string>
     <string name="praticar">Praticar</string>
     <string name="estudar">Estudar</string>
+    <string name="resultado_final">Resultado final</string>
+
+    <!-- Texto boas vindas-->
     <string name="textoBoasVindas">O Learn IT é um aplicativo que irá fornecer um guia prático e dinâmico para aprender a programar, utilizando como linguagem de programação, o Groovy.
 Para quem não sabe, o Groovy é uma linguagem criada para o Java totalmente Orientada a Objetos, semelhante a Ruby e Python, pode-se entender como uma mistura dos mesmos e o mais legal de tudo; ela é interpretada pela JVM assim como Scala e Kotlin!
 Com todas essas características, entre várias outras, o Learn IT vai lhe apresentar de uma forma didática e interativa, sendo a maior expectativa, o aprendizado qualificado na escrita de códigos pelo aluno, utilizando Groovy
@@ -13,10 +20,41 @@ Com todas essas características, entre várias outras, o Learn IT vai lhe apres
 
     <!-- Questão 01-->
     <string name="label_questionario">Questionario</string>
-    <string name="questao01">Quem nasceu primeiro, o ovo ou a galinha?</string>
-    <string name="alternativa01">A galinha</string>
-    <string name="alternativa02">O ovo</string>
+    <string name="questao01">Em Groovy, qual caracter utilizar para paramêtros em uma closures? </string>
+    <string name="alternativa01_01">-></string>
+    <string name="alternativa01_02">=></string>
+    <string name="alternativa01_03">==></string>
+    <string name="alternativa01_04">(</string>
 
-    <string name="lbl_responder">Responder</string>
+    <!-- Questão 02-->
+    <string name="questao02">Em uma classe Groovy, é possível utilizar código Java?</string>
+    <string name="alternativa02_01">Sim, é possível</string>
+    <string name="alternativa02_02">Não, não é possível</string>
+    <string name="alternativa02_03">Somente se a extensão for .java</string>
+    <string name="alternativa02_04">Nenhuma das alternativas</string>
+
+    <!-- Questão 03-->
+    <string name="questao03">Em Groovy, qual operador utilizamos para declarar uma variável com inferência de tipo?</string>
+    <string name="alternativa03_01">def</string>
+    <string name="alternativa03_02">val</string>
+    <string name="alternativa03_03">var</string>
+    <string name="alternativa03_04">variable</string>
+
+    <!-- Questão 04-->
+    <string name="questao04">Em Groovy, o que são Closures?</string>
+    <string name="alternativa04_01">Um bloco de código reutilizável delimitado por chaves</string>
+    <string name="alternativa04_02">Um bloco de código não reutilizável delimitado por parenteses</string>
+    <string name="alternativa04_03">Um bloco de código onde seu retorno sempre será null</string>
+    <string name="alternativa04_04">Um bloco de código reutilizável iniciado com $</string>
+
+    <!-- Questão 05-->
+    <string name="questao05">Qual o nome do operador: ?.</string>
+    <string name="alternativa05_01">Elvis Operator</string>
+    <string name="alternativa05_02">Safe Navigation</string>
+    <string name="alternativa05_03">Safe Verified</string>
+    <string name="alternativa05_04">Check Operation</string>
+
+
+
 
 </resources>

@@ -8,16 +8,16 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
 
-class PrimeiroQuestionarioActivity : AppCompatActivity() {
+class TerceiroQuestionarioActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_primeiro_questionario)
+        setContentView(R.layout.activity_terceiro_questionario)
 
-        responderPrimeiroQuestionario()
+        responderTerceiroQuestionario()
     }
 
-    private fun responderPrimeiroQuestionario(): Unit {
+    private fun responderTerceiroQuestionario(): Unit {
         val radioGroupQuestionario = findViewById(R.id.radioGroupQuestionarioId) as RadioGroup
         val btnRespostaQuestionario = findViewById(R.id.btnResponder) as Button
 
@@ -29,17 +29,16 @@ class PrimeiroQuestionarioActivity : AppCompatActivity() {
                 val opcaoEscolhida = findViewById(questaoSelecionada) as RadioButton
                 val textoOpcao = opcaoEscolhida.text.toString()
 
-                responderSegundoQuestionario()
+                responderQuartoQuestionario()
             } else {
-                Toast.makeText(this@PrimeiroQuestionarioActivity, "Por favor, selecione uma alternativa", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@TerceiroQuestionarioActivity, "Por favor, selecione uma alternativa", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
         })
     }
 
-
-    private fun responderSegundoQuestionario(): Unit {
-        val intentSegundoQuestionario = Intent(this@PrimeiroQuestionarioActivity, SegundoQuestionarioActivity::class.java)
-        startActivity(intentSegundoQuestionario)
+    fun responderQuartoQuestionario(): Unit{
+        val intentQuartoQuestionario = Intent(this@TerceiroQuestionarioActivity, QuartoQuestionarioActivity::class.java)
+        startActivity(intentQuartoQuestionario)
     }
 }

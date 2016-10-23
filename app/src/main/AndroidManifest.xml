@@ -50,7 +50,41 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".BoasVindasActivity" />
-
+        </activity>
+        <activity
+            android:name=".SegundoQuestionarioActivity"
+            android:label="@string/label_questionario">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
+        </activity>
+        <activity
+            android:name=".TerceiroQuestionarioActivity"
+            android:label="@string/label_questionario">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
+        </activity>
+        <activity
+            android:name=".QuartoQuestionarioActivity"
+            android:label="@string/label_questionario">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
+        </activity>
+        <activity
+            android:name=".QuintoQuestionarioActivity"
+            android:label="@string/label_questionario">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
+        </activity>
+        <activity
+            android:name=".ResultadoActivity"
+            android:label="@string/resultado_final">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
         </activity>
     </application>
 

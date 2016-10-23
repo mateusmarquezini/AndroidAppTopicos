@@ -14,12 +14,20 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        navegarTelaCadastro()
+
+        entrarNoApp()
+    }
+
+    private fun navegarTelaCadastro() {
         val botaoCadastrarUsuario = findViewById(R.id.btnCadastrarUsuario) as Button
         botaoCadastrarUsuario.setOnClickListener {
             val intentCadastrarUsuario = navegarParaTelaDeCadastro()
             startActivity(intentCadastrarUsuario)
         }
+    }
 
+    private fun entrarNoApp() {
         val botaoEntrar = findViewById(R.id.btnEntrar) as Button
         botaoEntrar.setOnClickListener(View.OnClickListener {
             // login mockado apenas para teste
@@ -39,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
         })
     }
 
-    fun verificaLogin(nomeDigitado: String, senhaDigitada: String): Boolean {
+    private fun verificaLogin(nomeDigitado: String, senhaDigitada: String): Boolean {
         if (nomeDigitado.length >= 5 && senhaDigitada.length >= 5
                 && "admin" == nomeDigitado
                 && "admin" == senhaDigitada) {
@@ -48,14 +56,14 @@ class LoginActivity : AppCompatActivity() {
         return false
     }
 
-    fun navegarParaTelaInicial(): Unit {
+    private fun navegarParaTelaInicial(): Unit {
         val intentEntrar = Intent(this@LoginActivity, BoasVindasActivity::class.java)
         startActivity(intentEntrar)
         Toast.makeText(this@LoginActivity, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
         finish()
     }
 
-    fun navegarParaTelaDeCadastro(): Intent {
+    private fun navegarParaTelaDeCadastro(): Intent {
         val intentCadastrarUsuario = Intent(this@LoginActivity, CadastroUsuarioActivity::class.java)
         return intentCadastrarUsuario
     }

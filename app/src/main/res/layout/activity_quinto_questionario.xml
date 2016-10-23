@@ -2,17 +2,17 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_primeiro_questionario"
+    android:id="@+id/activity_quinto_questionario"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.br.apptopicos.PrimeiroQuestionarioActivity">
 
     <TextView
-        android:text="@string/questao01"
-        android:layout_width="366dp"
+        android:text="@string/questao05"
+        android:layout_width="0dp"
         android:layout_height="111dp"
-        android:id="@+id/textoQuestao01"
-        android:textSize="30dp"
+        android:id="@+id/textoQuestao05"
+        android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
@@ -46,9 +46,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/guideline23"
-        app:layout_constraintGuide_begin="359dp"
+        app:layout_constraintGuide_begin="476dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="359dp"
+        tools:layout_editor_absoluteY="476dp"
         tools:layout_editor_absoluteX="0dp" />
 
     <android.support.constraint.Guideline
@@ -61,8 +61,8 @@
         tools:layout_editor_absoluteX="158dp" />
 
     <RadioGroup
-        android:layout_width="350dp"
-        android:layout_height="163dp"
+        android:layout_width="330dp"
+        android:layout_height="245dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline23"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
@@ -71,32 +71,34 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline21"
         android:weightSum="1"
-        android:id="@+id/radioGroupQuestionarioId">
+        android:id="@+id/radioGroupQuestionarioId"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintVertical_bias="0.060000002">
 
         <RadioButton
-            android:text="@string/alternativa01_01"
+            android:text="@string/alternativa05_01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/radioBtnOp01"
             android:textSize="20dp"/>
 
         <RadioButton
-            android:text="@string/alternativa01_02"
+            android:text="@string/alternativa05_02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/radioBtnOp02"
             android:textSize="20dp"/>
 
         <RadioButton
-            android:text="@string/alternativa01_03"
+            android:text="@string/alternativa05_03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/radioBtnOp03"
             android:textSize="20dp"/>
 
         <RadioButton
-            android:text="@string/alternativa01_04"
-            android:layout_width="wrap_content"
+            android:text="@string/alternativa05_04"
+            android:layout_width="366dp"
             android:layout_height="wrap_content"
             android:id="@+id/radioBtnOp04"
             android:textSize="20dp"/>
