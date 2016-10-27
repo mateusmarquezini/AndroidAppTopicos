@@ -44,14 +44,6 @@
                 android:value=".BoasVindasActivity" />
         </activity>
         <activity
-            android:name=".EstudarActivity"
-            android:label="@string/estudar"
-            android:screenOrientation="portrait">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".BoasVindasActivity" />
-        </activity>
-        <activity
             android:name=".SegundoQuestionarioActivity"
             android:label="@string/label_questionario">
             <meta-data
@@ -89,6 +81,14 @@
         <activity
             android:name=".ResultadoNegativoActivity"
             android:label="@string/resultado_final">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".BoasVindasActivity" />
+        </activity>
+        <activity
+            android:name=".EstudosActivity"
+            android:label="@string/title_activity_estudos"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".BoasVindasActivity" />

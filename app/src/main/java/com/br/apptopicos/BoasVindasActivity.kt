@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
+import com.br.apptopicos.util.PontuadorUtil
 
 class BoasVindasActivity : AppCompatActivity() {
 
@@ -20,6 +21,7 @@ class BoasVindasActivity : AppCompatActivity() {
     fun navegarParaTelaDePratica(): Unit {
         val botaoPraticar = findViewById(R.id.btnPraticar) as Button
         botaoPraticar.setOnClickListener {
+            PontuadorUtil.pontos = 0
             val intentPraticar = Intent(this@BoasVindasActivity, PrimeiroQuestionarioActivity::class.java)
             startActivity(intentPraticar)
         }
@@ -28,7 +30,7 @@ class BoasVindasActivity : AppCompatActivity() {
     fun navegarParaTelaDeEstudos(): Unit {
         val botaoEstudar = findViewById(R.id.btnEstudar) as Button
         botaoEstudar.setOnClickListener {
-            val intentEstudar = Intent(this@BoasVindasActivity, EstudarActivity::class.java)
+            val intentEstudar = Intent(this@BoasVindasActivity, EstudosActivity::class.java)
             startActivity(intentEstudar)
         }
     }
