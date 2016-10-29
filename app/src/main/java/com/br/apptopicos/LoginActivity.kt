@@ -8,6 +8,11 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONObject
 
 class LoginActivity : AppCompatActivity() {
 
@@ -52,12 +57,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun verificaLogin(nomeDigitado: String, senhaDigitada: String): Boolean {
-        if (nomeDigitado.length >= 5 && senhaDigitada.length >= 5
-                && "admin" == nomeDigitado
-                && "admin" == senhaDigitada) {
+        if (carregaUsuario(nomeDigitado, senhaDigitada)) {
             return true
+
+        } else {
+            return false
         }
-        return false
+
     }
 
     private fun navegarParaTelaInicial(): Unit {
@@ -70,5 +76,30 @@ class LoginActivity : AppCompatActivity() {
     private fun navegarParaTelaDeCadastro(): Intent {
         val intentCadastrarUsuario = Intent(this@LoginActivity, CadastroUsuarioActivity::class.java)
         return intentCadastrarUsuario
+    }
+
+    private fun carregaUsuario(nomeDigitado: String, senhaDigitada: String): Boolean {
+        val queue = Volley.newRequestQueue(this)
+        var resposta = false
+        val jsonBody = JSONObject("{\"NomeUsuario\":\"$nomeDigitado\",\"Senha\":\"$senhaDigitada\"}")
+        val request = JsonObjectRequest(
+                Request.Method.POST,
+                ENDERECO,
+                jsonBody,
+                Response.Listener<JSONObject> { response ->
+                    resposta = response.getBoolean("Valido")
+
+                },
+                Response.ErrorListener { error ->
+                    Toast.makeText(this@LoginActivity, error.toString(), Toast.LENGTH_SHORT).show()
+                    resposta = false
+                })
+
+        queue.add(request)
+        return resposta
+    }
+
+    companion object {
+        private val ENDERECO = "http://localhost:1711/api/Usuario/Login"
     }
 }
