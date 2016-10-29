@@ -9,43 +9,32 @@
     tools:context="com.br.apptopicos.CadastroUsuarioActivity">
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="100dp"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="511dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="15dp"
-        tools:layout_editor_absoluteX="345dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
         android:id="@+id/guideline11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="10dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="501dp" />
+        tools:layout_editor_absoluteY="593dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="323dp"
-        android:layout_height="212dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cadastrologo"
-        app:layout_constraintHorizontal_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintBottom_toTopOf="@+id/guideline17"
+        android:layout_marginBottom="11dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginTop="3dp"
+        tools:layout_constraintLeft_creator="1" />
 
     <Button
         android:id="@+id/btnCadastrar"
@@ -53,60 +42,74 @@
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorBtnDefault"
         android:text="@string/cadastrar"
         app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline15"
-        app:layout_constraintRight_toLeftOf="@+id/guideline16"
         app:layout_constraintTop_toBottomOf="@+id/cadPassword"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintVertical_bias="0.37"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="0dp"
+        android:layout_width="55dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:text="Usuário:"
-        app:layout_constraintBottom_toTopOf="@+id/cadNomeUsuario"
-        app:layout_constraintRight_toLeftOf="@+id/guideline5" />
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline17"
+        app:layout_constraintVertical_bias="0.33" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Senha:"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintLeft_toLeftOf="@+id/textView3"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline17"
+        app:layout_constraintVertical_bias="0.29" />
 
 
 
     <EditText
         android:id="@+id/cadNomeUsuario"
-        android:layout_width="247dp"
-        android:layout_height="45dp"
+        android:layout_width="259dp"
+        android:layout_height="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintRight_toLeftOf="@+id/guideline16"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline15"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintTop_toTopOf="@+id/guideline17" />
+        app:layout_constraintTop_toTopOf="@+id/guideline17"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <EditText
         android:id="@+id/cadPassword"
-        android:layout_width="247dp"
-        android:layout_height="44dp"
+        android:layout_width="259dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintTop_toTopOf="@+id/guideline8"
-        app:layout_constraintRight_toLeftOf="@+id/guideline16"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline15"
-        app:layout_constraintHorizontal_bias="0.75"
-        android:layout_marginTop="8dp" />
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/cadNomeUsuario" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline17"
@@ -116,59 +119,5 @@
         app:layout_constraintGuide_begin="227dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="227dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="366dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="366dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="318dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="318dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="32dp"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="85dp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="45dp"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="0dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="45dp"
-        tools:layout_editor_absoluteX="315dp"
-        tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>
