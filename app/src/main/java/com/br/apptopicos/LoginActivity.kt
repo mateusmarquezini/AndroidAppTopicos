@@ -65,7 +65,7 @@ class LoginActivity : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this)
         val jsonBody = JSONObject("{\"NomeUsuario\":\"$nomeDigitado\",\"Senha\":\"$senhaDigitada\"}")
 
-        var listener = Response.Listener<JSONObject> { response ->
+        val listener = Response.Listener<JSONObject> { response ->
 
             Log.i("Resposta:", response.toString())
 
@@ -83,7 +83,7 @@ class LoginActivity : AppCompatActivity() {
 
         val request = JsonObjectRequest(
                 Request.Method.POST,
-                ENDERECO,
+                ENDERECO_LOGIN,
                 jsonBody,
                 listener,
                 errorListener)
@@ -93,6 +93,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     companion object {
-        private val ENDERECO = "http://marquezini.tunim.com.br/api/Usuario/Login"
+        private val ENDERECO_LOGIN = "http://marquezini.tunim.com.br/api/Usuario/Login"
     }
 }
