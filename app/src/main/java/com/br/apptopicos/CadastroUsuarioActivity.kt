@@ -86,8 +86,6 @@ class CadastroUsuarioActivity : AppCompatActivity() {
 
     }
 
-    //"{\"InclusaoSucesso\":true}"
-
     companion object {
         private val ENDERECO_INCLUSAO = "http://marquezini.tunim.com.br/api/Usuario/IncluirUsuario"
     }
