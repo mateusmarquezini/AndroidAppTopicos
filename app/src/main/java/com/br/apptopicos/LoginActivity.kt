@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
@@ -21,9 +22,12 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val progressBar = findViewById(R.id.progressBarLogin) as ProgressBar
+        progressBar.visibility = View.GONE
+
         navegarTelaCadastro()
 
-        entrarNoApp()
+        entrarNoApp(progressBar)
     }
 
     private fun navegarTelaCadastro() {
@@ -34,9 +38,11 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun entrarNoApp() {
+    private fun entrarNoApp(progressBar: ProgressBar): Unit {
         val botaoEntrar = findViewById(R.id.btnEntrar) as Button
         botaoEntrar.setOnClickListener({ view ->
+
+            progressBar.visibility = View.VISIBLE
 
             val nomeUsuario = findViewById(R.id.loginNomeUsuario) as EditText
             val senhaUsuario = findViewById(R.id.loginSenhaUsuario) as EditText
@@ -44,12 +50,13 @@ class LoginActivity : AppCompatActivity() {
             val nomeDigitado = nomeUsuario.text.toString()
             val senhaDigitada = senhaUsuario.text.toString()
 
-            verificaLoginNoServico(nomeDigitado, senhaDigitada)
+            verificaLoginNoServico(nomeDigitado, senhaDigitada, progressBar)
 
         })
     }
 
-    private fun navegarParaTelaInicial(): Unit {
+    private fun navegarParaTelaInicial(progressBar: ProgressBar): Unit {
+        progressBar.visibility = View.GONE
         val intentEntrar = Intent(this@LoginActivity, BoasVindasActivity::class.java)
         startActivity(intentEntrar)
         Toast.makeText(this@LoginActivity, "Login efetuado com sucesso!", Toast.LENGTH_SHORT).show()
@@ -61,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
         return intentCadastrarUsuario
     }
 
-    private fun verificaLoginNoServico(nomeDigitado: String, senhaDigitada: String) : Unit {
+    private fun verificaLoginNoServico(nomeDigitado: String, senhaDigitada: String, progressBar: ProgressBar) : Unit {
         val queue = Volley.newRequestQueue(this)
         val jsonBody = JSONObject("{\"NomeUsuario\":\"$nomeDigitado\",\"Senha\":\"$senhaDigitada\"}")
 
@@ -70,8 +77,9 @@ class LoginActivity : AppCompatActivity() {
             Log.i("Resposta:", response.toString())
 
             if(response.toString() == "{\"Valido\":true}"){
-                navegarParaTelaInicial()
+                navegarParaTelaInicial(progressBar)
             }else {
+                progressBar.visibility = View.GONE
                 Toast.makeText(this@LoginActivity, "Login Inválido! Tente novamente.", Toast.LENGTH_SHORT).show()
 
             }
