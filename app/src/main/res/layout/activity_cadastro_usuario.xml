@@ -71,6 +71,17 @@
         app:layout_constraintBottom_toTopOf="@+id/cadNomeUsuario"
         app:layout_constraintRight_toLeftOf="@+id/guideline5" />
 
+    <EditText
+        android:id="@+id/cadNomeUsuario"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline12"
+        app:layout_constraintRight_toLeftOf="@+id/guideline16" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -95,16 +106,6 @@
         app:layout_constraintTop_toBottomOf="@+id/cadNomeUsuario"
         app:layout_constraintVertical_bias="0.060000002" />
 
-    <EditText
-        android:id="@+id/cadNomeUsuario"
-        android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/guideline8"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline12"
-        app:layout_constraintRight_toLeftOf="@+id/guideline16" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline17"
@@ -170,17 +171,17 @@
         tools:layout_editor_absoluteY="0dp" />
 
     <ProgressBar
+        android:id="@+id/progressBarCadUsuario"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="106dp"
         android:layout_height="105dp"
-        android:id="@+id/progressBarCadUsuario"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.58" />
 </android.support.constraint.ConstraintLayout>

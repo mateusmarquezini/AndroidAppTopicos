@@ -29,7 +29,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5870842"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="354dp" />
+        tools:layout_editor_absoluteY="300dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="18dp"
-        tools:layout_editor_absoluteX="393dp"
+        tools:layout_editor_absoluteX="342dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <EditText
@@ -68,22 +68,17 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="16dp"
         android:text="Usuario:"
-        app:layout_constraintBottom_toTopOf="@+id/loginNomeUsuario"
         app:layout_constraintLeft_toLeftOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.82" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Senha:"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintLeft_toLeftOf="@+id/loginNomeUsuario"
         app:layout_constraintTop_toBottomOf="@+id/loginNomeUsuario" />
 
@@ -101,23 +96,24 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:background="@color/colorBtnDefault"
         android:text="@string/cadastrar"
-        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEntrar"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        app:layout_constraintVertical_bias="0.97" />
 
     <Button
         android:id="@+id/btnEntrar"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:background="@color/colorBtnDefault"
         android:text="@string/entrar"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnCadastrarUsuario"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline6" />
+        app:layout_constraintLeft_toLeftOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/guideline9" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline9"
@@ -156,18 +152,18 @@
         tools:layout_constraintTop_creator="1" />
 
     <ProgressBar
+        android:id="@+id/progressBarLogin"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="106dp"
         android:layout_height="105dp"
-        android:id="@+id/progressBarLogin"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.58" />
 
 </android.support.constraint.ConstraintLayout>

@@ -50,9 +50,21 @@ class LoginActivity : AppCompatActivity() {
             val nomeDigitado = nomeUsuario.text.toString()
             val senhaDigitada = senhaUsuario.text.toString()
 
-            verificaLoginNoServico(nomeDigitado, senhaDigitada, progressBar)
+            if (validaCamposDigitados(nomeDigitado, senhaDigitada)) {
 
+                verificaLoginNoServico(nomeDigitado, senhaDigitada, progressBar)
+
+            } else {
+                progressBar.visibility = View.GONE
+                Snackbar.make(view, "Campos obrigatórios não foram preenchidos!", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null)
+                        .show()
+            }
         })
+    }
+
+    private fun validaCamposDigitados(nome: String, senha: String): Boolean {
+        if (nome.length != 0 && senha.length != 0) return true else return false
     }
 
     private fun navegarParaTelaInicial(progressBar: ProgressBar): Unit {
@@ -68,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
         return intentCadastrarUsuario
     }
 
-    private fun verificaLoginNoServico(nomeDigitado: String, senhaDigitada: String, progressBar: ProgressBar) : Unit {
+    private fun verificaLoginNoServico(nomeDigitado: String, senhaDigitada: String, progressBar: ProgressBar): Unit {
         val queue = Volley.newRequestQueue(this)
         val jsonBody = JSONObject("{\"NomeUsuario\":\"$nomeDigitado\",\"Senha\":\"$senhaDigitada\"}")
 
@@ -76,9 +88,9 @@ class LoginActivity : AppCompatActivity() {
 
             Log.i("Resposta:", response.toString())
 
-            if(response.toString() == "{\"Valido\":true}"){
+            if (response.toString() == "{\"Valido\":true}") {
                 navegarParaTelaInicial(progressBar)
-            }else {
+            } else {
                 progressBar.visibility = View.GONE
                 Toast.makeText(this@LoginActivity, "Login Inválido! Tente novamente.", Toast.LENGTH_SHORT).show()
 

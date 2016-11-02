@@ -36,6 +36,7 @@ class CadastroUsuarioActivity : AppCompatActivity() {
             val nomeUsuario = usuario.text.toString()
 
             if (senhaUsuario.length < 5) {
+                progressBar.visibility = View.GONE
                 Snackbar.make(view, "A senha deve ter no minimo 5 caracteres", Snackbar.LENGTH_LONG)
                         .setAction("Action", null)
                         .show()
@@ -43,6 +44,7 @@ class CadastroUsuarioActivity : AppCompatActivity() {
             }
 
             if (nomeUsuario.length < 5) {
+                progressBar.visibility = View.GONE
                 Snackbar.make(view, "A campo Usuário deve ter no minimo 5 caracteres", Snackbar.LENGTH_LONG)
                         .setAction("Action", null)
                         .show()
