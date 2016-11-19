@@ -64,9 +64,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="486dp"
+        app:layout_constraintGuide_begin="490dp"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="486dp" />
+        tools:layout_editor_absoluteY="490dp" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -78,13 +78,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sad_avatar" />
+        app:srcCompat="@drawable/sad" />
 
     <Button
         android:id="@+id/btnTentarNovamente"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="153dp"
-        android:layout_height="50dp"
+        android:layout_width="157dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
