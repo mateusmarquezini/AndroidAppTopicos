@@ -8,90 +8,93 @@
     tools:context="com.br.apptopicos.ResultadoPositivoActivity">
 
     <TextView
-        android:text="pontos"
+        android:id="@+id/resultadoFinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/resultadoFinal"
-        android:textSize="60dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/infoResultNegativo"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/infoResultNegativo2"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="pontos"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/infoResultNegativo2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoResultNegativo"
         app:layout_constraintVertical_bias="0.050000012" />
 
     <TextView
-        android:text="@string/resultado_final_negativo_info01"
+        android:id="@+id/infoResultNegativo"
         android:layout_width="331dp"
         android:layout_height="116dp"
-        android:id="@+id/infoResultNegativo"
-        android:textSize="30dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/resultado_final_negativo_info01"
+        android:textSize="30dp"
+        app:layout_constraintHorizontal_bias="0.21"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline26"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintHorizontal_bias="0.21"
-        android:layout_marginTop="8dp"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
-        android:text="@string/resultado_final_negativo_info02"
+        android:id="@+id/infoResultNegativo2"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:id="@+id/infoResultNegativo2"
-        android:textSize="30dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="24dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:text="@string/resultado_final_negativo_info02"
+        android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/btnTentarNovamente"
-        android:layout_marginBottom="24dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/guideline26"
-        app:layout_constraintGuide_begin="387dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="387dp" />
-
-    <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="387dp"
+        tools:layout_editor_absoluteX="387dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.support.constraint.Guideline
         android:id="@+id/guideline27"
-        app:layout_constraintGuide_begin="486dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="486dp"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintGuide_begin="486dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="486dp" />
 
     <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="149dp"
         android:layout_height="115dp"
-        app:srcCompat="@drawable/sad_avatar"
-        android:id="@+id/imageView4"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sad_avatar" />
 
     <Button
-        android:text="Tentar novamente"
+        android:id="@+id/btnTentarNovamente"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="153dp"
         android:layout_height="50dp"
-        android:id="@+id/btnTentarNovamente"
-        android:background="@color/colorBtnDefault"
-        android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/guideline27"
         android:layout_marginBottom="8dp"
-        style="@style/Widget.AppCompat.Button.Colored" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/colorBtnDefault"
+        android:elevation="6dp"
+        android:stateListAnimator="@null"
+        android:text="Tentar novamente"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/guideline27"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

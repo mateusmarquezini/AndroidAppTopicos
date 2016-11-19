@@ -45,45 +45,50 @@
 
     <Button
         android:id="@+id/btnEstudar"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:background="@color/colorBtnDefault"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/colorBtnDefault"
+        android:elevation="6dp"
+        android:stateListAnimator="@null"
         android:text="@string/estudar"
+        android:textColor="#ffffff"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline18"
         app:layout_constraintRight_toLeftOf="@+id/guideline19"
-        app:layout_constraintTop_toTopOf="@+id/guideline20"
-        android:layout_marginTop="72dp"
-        app:layout_constraintHorizontal_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline20" />
 
     <Button
         android:id="@+id/btnPraticar"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:background="@color/colorBtnDefault"
+        android:backgroundTint="@color/colorBtnDefault"
+        android:elevation="6dp"
+        android:stateListAnimator="@null"
         android:text="@string/praticar"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/guideline14"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline18"
         app:layout_constraintRight_toLeftOf="@+id/guideline19"
         app:layout_constraintTop_toBottomOf="@+id/btnEstudar" />
 
     <TextView
-        android:text="@string/textoBoasVindas"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
         android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="213dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/textoBoasVindas"
         app:layout_constraintBottom_toTopOf="@+id/btnEstudar"
-        android:layout_marginBottom="8dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

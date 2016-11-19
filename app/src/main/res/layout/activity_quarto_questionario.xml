@@ -18,11 +18,11 @@
         android:text="@string/questao04"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline21"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29000002"
-        app:layout_constraintHorizontal_bias="0.75" />
+        app:layout_constraintVertical_bias="0.41000003" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline21"
@@ -56,8 +56,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="158dp"
-        tools:layout_editor_absoluteX="158dp"
+        app:layout_constraintGuide_begin="156dp"
+        tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="0dp" />
 
     <RadioGroup
@@ -106,18 +106,21 @@
 
     <Button
         android:id="@+id/btnResponder"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="56dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/colorBtnDefault"
-        android:text="@string/lbl_responder"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/colorBtnDefault"
+        android:elevation="6dp"
+        android:stateListAnimator="@null"
+        android:text="próximo"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline25"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroupQuestionarioId" />
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline25"

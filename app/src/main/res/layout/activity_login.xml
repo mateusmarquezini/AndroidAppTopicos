@@ -93,27 +93,33 @@
 
     <Button
         android:id="@+id/btnCadastrarUsuario"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:background="@color/colorBtnDefault"
+        android:elevation="6dp"
+        android:stateListAnimator="@null"
         android:text="@string/cadastrar"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="@+id/btnEntrar"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintVertical_bias="0.97"
+        android:backgroundTint="@color/colorBtnDefault" />
 
     <Button
         android:id="@+id/btnEntrar"
-        style="@style/Widget.AppCompat.Button.Colored"
+        style="@style/Widget.AppCompat.Button"
         android:layout_width="136dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="@color/colorBtnDefault"
+        android:elevation="6dp"
+        android:stateListAnimator="@null"
         android:text="@string/entrar"
+        android:textColor="#ffffff"
         app:layout_constraintLeft_toLeftOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline9" />
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        android:backgroundTint="@color/colorBtnDefault" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline9"
