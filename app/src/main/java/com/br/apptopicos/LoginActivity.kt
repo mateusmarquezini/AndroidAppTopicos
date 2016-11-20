@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -28,6 +30,23 @@ class LoginActivity : AppCompatActivity() {
         navegarTelaCadastro()
 
         entrarNoApp(progressBar)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem ): Boolean{
+
+        when (item.itemId) {
+            R.id.action_about -> {
+                val intentSobreApp = Intent(this@LoginActivity, SobreActivity::class.java)
+                startActivity(intentSobreApp)
+                return true
+            } else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_about, menu)
+        return true
     }
 
     private fun navegarTelaCadastro() {

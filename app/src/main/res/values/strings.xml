@@ -64,6 +64,12 @@ Com todas essas características, entre várias outras, o Learn IT vai lhe apres
     <string name="resultado_final_negativo_info01">Que pena! Seu resultado não foi satisfatório! Você acertou: </string>
     <string name="resultado_final_negativo_info02">De 5 questões! :(</string>
     <string name="title_activity_estudos">Estudar</string>
+
+    <!-- Tela sobre o app-->
+    <string name="title_activity_sobre">Sobre o Learn IT</string>
+    <string name="texto_sobre_app">"Aplicativo desenvolvido pelos alunos do 8° e 6° Semestre do curso de Ciência da Computação"</string>
+    <string name="alunos_label">Alunos</string>
+    <string name="alunos_nomes">"Bruno Cesar Varzan\nFelipe Henrique de Oliveira\nJean Rodrigues\nLuis Matheus Curti\nMateus Marquezini\n"</string>
     <string name="large_text">
         "• Sobre o Groovy\n\n"
 "Groovy é uma linguagem orientada a objetos que é baseada na plataforma Java.\n"
@@ -104,6 +110,7 @@ Com todas essas características, entre várias outras, o Learn IT vai lhe apres
 ": java.lang.Double\n\n"ƒ
     </string>
     <string name="action_settings">Settings</string>
+    <string name="about">Sobre</string>
 
 
 </resources>

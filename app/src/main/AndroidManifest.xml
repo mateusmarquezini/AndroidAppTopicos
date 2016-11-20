@@ -10,11 +10,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!-- Login -->
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".CadastroUsuarioActivity"
             android:label="Cadastro"
@@ -102,6 +102,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".BoasVindasActivity" />
         </activity>
+        <activity android:name=".SobreActivity"
+            android:label="@string/title_activity_sobre"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity" />
+
+        </activity>
+
     </application>
 
 </manifest>
